@@ -1,4 +1,4 @@
-fetch("./data.json")
+fetch("https://github.com/adil1996/data_repo/blob/master/popularCuisines.json")
         .then((res) => {
         return res.json();
     })
