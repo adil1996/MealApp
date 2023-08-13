@@ -1,4 +1,4 @@
-fetch("https://github.com/adil1996/MealApp/blob/master/assest/data/popularCuisines.json")
+fetch("./data.json")
         .then((res) => {
         return res.json();
     })
