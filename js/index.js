@@ -1,4 +1,6 @@
-fetch("https://github.com/adil1996/data_repo/blob/master/popularCuisines.json")
+fetch("https://github.com/adil1996/data_repo/blob/master/popularCuisines.json",{
+    referrerPolicy: 'no-referrer'
+})
         .then((res) => {
         return res.json();
     })
