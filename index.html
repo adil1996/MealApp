@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Meal App</title>
+    <link href="assest/image/logo.png " rel="shortcut icon" type="image/x-icon" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="header" class="fixed-top">
+        <div class="parent-container">
+            <dev class="chiled-container">
+                <a class="chiled-head-container" href="index.html"><img class="logo" src="assest/image/logo.png" />
+                <span class="nav-title">Meal App</span></a>
+
+                <a href="javascript:void(0);"  class="icon" onclick="toggleMobileView()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </dev>
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="scrollto" onclick="toggleMobileView()">
+                    <h4 class="h4-title mg-right">
+                        <i class="fa fa-home" aria-hidden="true" style="margin-right: 0.5rem;"></i></i>Home
+                    </h4>
+                </a>
+                <a href="#search" class="scrollto" onclick="toggleMobileView()">
+                    <h4 class="h4-title mg-right">
+                        <i class="fa fa-search" aria-hidden="true" style="margin-right: 0.5rem;"></i>Search
+                    </h4>
+                </a>
+
+                <a href="#favourites" class="scrollto" onclick="toggleMobileView()">
+                    <h4 class="h4-title">
+                        <i class="fa fa-heart" aria-hidden="true" style="margin-right: 0.5rem;"></i>Favourite
+                    </h4>
+                </a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section id="home">
+            <div class="home-parent">
+                <div class="child-parent">
+                    <h1>
+                       My Meal 
+                    </h1>
+                    <h3>Find you best food by your choice, explore it, get to know more about it, live it to up.</h3>
+                    <h1 style="font-size: 9rem;line-height: 10rem;color: darkorange;">Live it UP</h1>
+                </div>
+                <div class="child-parent">
+                    <img src="assest/image/homePage.jpg" 
+                    style="width: 100%; height: 100%; animation: up-down 2s ease-in-out infinite alternate-reverse both;"/>
+
+                </div>
+            </div>
+
+        </section>
+        <section id="search">
+            <div >
+                <div id="search-bar" class="search-bar">
+                    <input type="text" placeholder="Enter for meal ..." class="search-input"/>
+                    <i class="fa fa-search" aria-hidden="true" style="margin-right: 0.5rem;color: gray;"></i>
+
+                </div>
+                <div id="popular-cuisines">
+                    <h1>Popular Cuisines</h1>
+                    <div>
+                         
+                    </div>
+
+                </div>
+                <div id="content"></div>
+            </div>
+
+        </section>
+        <section id="favourites">
+            <h1>Favourites</h1>
+            <p class="paragraph-card">TechNix LLC is Information Technology consulting company offering Software
+                Development Services,
+                Workforce Solutions and Outsourcing.. We are the trusted software development partner for
+                Commercial and Government clients worldwide. TechNix has a strong reputation as a business and
+                consulting company. Our team with its years of experience has been providing suitable IT
+                professionals for permanent & contractual positions to our clients.</p>
+                <p class="paragraph-card">TechNix LLC is Information Technology consulting company offering Software
+                    Development Services,
+                    Workforce Solutions and Outsourcing.. We are the trusted software development partner for
+                    Commercial and Government clients worldwide. TechNix has a strong reputation as a business and
+                    consulting company. Our team with its years of experience has been providing suitable IT
+                    professionals for permanent & contractual positions to our clients.</p>
+                    <p class="paragraph-card">TechNix LLC is Information Technology consulting company offering Software
+                        Development Services,
+                        Workforce Solutions and Outsourcing.. We are the trusted software development partner for
+                        Commercial and Government clients worldwide. TechNix has a strong reputation as a business and
+                        consulting company. Our team with its years of experience has been providing suitable IT
+                        professionals for permanent & contractual positions to our clients.</p>
+                        <p class="paragraph-card">TechNix LLC is Information Technology consulting company offering Software
+                            Development Services,
+                            Workforce Solutions and Outsourcing.. We are the trusted software development partner for
+                            Commercial and Government clients worldwide. TechNix has a strong reputation as a business and
+                            consulting company. Our team with its years of experience has been providing suitable IT
+                            professionals for permanent & contractual positions to our clients.</p>
+
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <div id="preloader"></div>
+    <script src="./js/index.js" ></script>
+</body>
+
+</html>
