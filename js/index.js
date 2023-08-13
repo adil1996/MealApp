@@ -179,23 +179,50 @@ const showMealList = (value) => {
                 data.meals.forEach((element) => {
 
                     html += `
-                    <div class="content-container">
-                    <div style="display: flex; padding: 1rem;">
-                        <img src=${element.strMealThumb} class="content-image"/>
-                        <div style="display: flex ; flex-direction: column;align-items: center; justify-content: center; margin-left: 1rem;">
-                            <h7 style="color: black; font-weight: 550;">
-                            ${element.strMeal}
-                            </h7>
-                            <h7 style="color: gray;">
-                            ${element.strCategory}
-                            </h7>
+                    <div class="content-container" id="sd-container-${element.idMeal}">
+                        <div style="display: flex; padding: 1rem;">
+                            <img src=${element.strMealThumb} class="content-image"/>
+                            <div style="display: flex ; flex-direction: column;align-items: center; justify-content: center; margin-left: 1rem;">
+                                <h7 style="color: black; font-weight: 550;">
+                                ${element.strMeal}
+                                </h7>
+                                <h7 style="color: gray;">
+                                ${element.strCategory}
+                                </h7>
+                            </div>
+                        </div>
+                        <div style="padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;">
+                            <i class="fa fa-heart-o heart-icon -md-block" aria-hidden="true" onclick="addOrRemoveFavoutite(this)" name=${element.idMeal}></i>
+                            <button class="button" onclick="details(this)" aria-expanded="true" name="sd-container-${element.idMeal}">More Deatils</button>
                         </div>
                     </div>
-                    <div style="padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;">
-                        <i class="fa fa-heart-o heart-icon -md-block" aria-hidden="true" onclick="addOrRemoveFavoutite(this)" id=${element.idMeal}></i>
-                        <button class="button" onclick="details(this)" id=${element.idMeal}>More Deatils</button>
+                    <div class="content-container -md-none" style="flex-direction: column !important;" id="md-container-${element.idMeal}">
+                        <div style="display: flex; justify-content: space-between; padding: 1rem;">
+                            <img src=${element.strMealThumb} class="content-image-max"/>
+                            <div style="display: flex ; flex-direction: column;align-items: center; justify-content: center; margin-left: 1rem;">
+                                <h7 style="color: black; font-weight: 550; font-size: 2.5rem;">
+                                ${element.strMeal}
+                                </h7>
+                                <h7 style="color: gray; font-size: 1.2rem;">
+                                Category : ${element.strCategory}
+                                </h7>
+                                <h7 style="color: gray; font-size: 1.2rem;">
+                                Area : ${element.strArea}
+                                </h7>
+                            </div>
+                            <div></div>
+                            <i class="fa fa-heart-o heart-icon" aria-hidden="true"></i>
+
+                        </div>
+                        <div style="padding: 1rem;">
+                            <p>${element.strInstructions}</p>    
+                        </div>
+                        <div style="padding: 1rem; display: flex;  justify-content: space-between; align-items: flex-end;">
+                            <button class="button" onclick="window.open('${element.strYoutube}','_blank')">Watch Vedio</button>
+                            <button class="button" onclick="window.open('${element.strSource}','_blank')">Read Content</button>
+                            <button class="button" onclick="details(this)" aria-expanded="false" name="md-container-${element.idMeal}">Less Details</button>
+                        </div>
                     </div>
-                </div>
                 `;
 
                 });
@@ -215,10 +242,35 @@ const showMealList = (value) => {
 
 }
 
+const toggleMoreDetails = () =>{
+
+}
 
 export const details = (event, i) => {
+    debugger
     console.log('Details...........')
     console.log(event)
+    let expand = event.ariaExpanded === 'true'
+    let ele = null
+    let ele1 = null
+
+    if(expand){
+        ele = document.getElementById(event.name)
+        ele1 = document.getElementById(event.name.replace('sd', 'md'))
+
+        ele.classList.add('-md-none')
+        ele1.classList.remove('-md-none')
+
+    }
+    else{
+
+        ele = document.getElementById(event.name)
+        ele1 = document.getElementById(event.name.replace('md', 'sd'))
+        
+        ele.classList.add('-md-none')
+        ele1.classList.remove('-md-none')
+        
+    }
 }
 
 export const addOrRemoveFavoutite = (event, i) => {

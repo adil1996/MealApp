@@ -293,6 +293,7 @@ section {
     border: 1px solid red;
     border-radius: 15px;
     padding: 5px;
+    height: 27px;
   }
 
   .button{
@@ -317,5 +318,11 @@ section {
 
   .-md-none{
     display: none !important;
+  }
+
+  .content-image-max{
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
   }
 
