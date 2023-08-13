@@ -244,3 +244,78 @@ section {
   .child-parent{
     width: 50%;
   }
+
+  .poular-cuisine-image{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+  }
+
+  .poular-cuisine{
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .poular-cuisine-child{
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .poular-cuisine-title{
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  #popular-cuisines{
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .content-image{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+  }
+
+  .content-container{
+    display: flex; 
+    justify-content: space-between; 
+    box-shadow: 1px 1px 1px lightgray;
+    margin-top: 1rem
+  }
+
+  .heart-icon{
+    color: red;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
+  .button{
+    background-color: white;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px
+  }
+
+  .button:hover{
+    background-color: #f1f4faf7;
+  }
+
+  .-md-flex{
+    display: flex !important;
+  }
+
+  .-md-block{
+    display: block !important;
+  }
+
+  .-md-none{
+    display: none !important;
+  }
+
