@@ -363,3 +363,17 @@ section {
     margin-left: 1rem;
   }
 
+
+  footer{
+    bottom: 0;
+    background-color: black;
+    display: flex !important;
+    flex-direction: row;
+    padding: 10px 50px 10px 50px;
+    justify-content: space-between;
+  }
+
+  #favourites{
+    padding-top:  180px;
+    margin-bottom:  100px;
+  }
